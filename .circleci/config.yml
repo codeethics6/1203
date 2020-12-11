@@ -18,6 +18,12 @@ jobs:
     steps:
       - checkout
       - run: npm install
+      - run: cd redux-bank && npm install
+      - run: npm start
+      - run: cd redux-bank/mock-server && npm install
+      - run: npm start
+      - run: cd ..
+      - run: cd ..
       - run: npm run uitest
       - run: npm run apitest
     
