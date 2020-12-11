@@ -1,4 +1,4 @@
-const request = require("supertest")("http://localhost:3003");
+const request = require("supertest")("https://reduxbank.herokuapp.com/");
 const expect = require("chai").expect;
 
 module.exports = {
