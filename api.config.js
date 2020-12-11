@@ -1,4 +1,4 @@
-const request = require("supertest")("https://airportgap.dev-tester.com/api");
+const request = require("supertest")("http://localhost:3003");
 const expect = require("chai").expect;
 
 module.exports = {

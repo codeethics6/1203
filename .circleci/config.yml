@@ -19,6 +19,7 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run uitest
+      - run: npm run apitest
     
 
 

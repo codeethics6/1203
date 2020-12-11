@@ -5,7 +5,7 @@
   "main": "performanceTest.js",
   "scripts": {
     "uitest": "wdio ./wdio.conf.js",
-    "apitest": "mocha *.test.js",
+    "apitest": "mocha ./test/api/specs/reduxBank.test.js",
     "prftest": "./node_modules/.bin/mocha --recursive"
   },
   "repository": {
