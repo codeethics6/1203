@@ -39,11 +39,6 @@ jobs:
             - ./redux-bank/mock-server/node_modules
 
           key: v1-dependencies-{{ checksum "package.json" }}
-
-      - run: cd ..
-      - run: cd ..
-      - run: npm run uitest
-      - run: npm run apitest
     
 
 
