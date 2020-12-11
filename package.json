@@ -4,7 +4,8 @@
   "description": "aio framework",
   "main": "performanceTest.js",
   "scripts": {
-    "postinstall": "cd redux-bank && npm install && npm start && cd mock-server && npm install && npm start",
+    "install:all": "npm install && cd redux-bank && npm install && cd mock-server && npm install",
+    "start": "cd redux-bank && concurrently \"npm start\" \"npm run start:mock\"",
     "uitest": "wdio ./wdio.conf.js",
     "apitest": "mocha ./test/api/specs/reduxBank.test.js",
     "prftest": "./node_modules/.bin/mocha --recursive"

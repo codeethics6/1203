@@ -27,15 +27,13 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: npm install
-      - run: cd redux-bank
-      - run: npm install
-      - run: cd redux-bank/mock-server
-      - run: npm install
+      - run: npm run install:all
+      - run: npm run start
+      - run: npm run apitest
 
       - save_cache:
           paths:
-            - e2e/node_modules
+            - ./node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run: cd ..

@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node server.js",
+    "start:mock": "cd mock-server && npm start",
     "build": "webpack --config ./webpack.production.config.js --progress --colors",
     "test": "NODE_ENV=test mocha --recursive --compilers js:babel-core/register",
     "test:watch": "npm test -- --watch",
