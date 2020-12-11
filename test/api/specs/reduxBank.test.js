@@ -11,6 +11,7 @@ describe("GET /api/transaction", function () {
 });
 
 describe("POST /api/transaction", function () {
+  this.timeout(5000);
   it("Post transaction", async function () {
     const response = await request
       .post("/api/transaction")
