@@ -21,19 +21,23 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           paths:
-            - e2e
+            - ./node_modules
+            - ./redux-bank/node_modules
+            - ./redux-bank/mock-server/node_modules
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
       - run: npm run install:all
-      - run: npm run start
-      - run: npm run apitest
+      - run: npm run test
 
       - save_cache:
           paths:
             - ./node_modules
+            - ./redux-bank/node_modules
+            - ./redux-bank/mock-server/node_modules
+
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run: cd ..
